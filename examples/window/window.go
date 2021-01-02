@@ -1,18 +1,15 @@
-// goncurses - ncurses library for Go.
-// Copyright 2011 Rob Thornton. All rights reserved.
-// Use of this source code is governed by a BSD-style
-// license that can be found in the LICENSE file.
+// This simple example demonstrates how one might move a window about the
+// screen. It is worthy of note that the window must be erased each time it
+// is moved. This is because a 'ghost' of the prior window will be left
+// behind. There are other techniques you could use depending on what you
+// need to achieve but this demonstrates a fairly simple method.
 
-/* This simple example demonstrates how one might move a window about the
-* screen. It is worthy of note that the window must be erased each time it
-* is moved. This is because a 'ghost' of the prior window will be left
-* behind. There are other techniques you could use depending on what you
-* need to achieve but this demonstrates a fairly simple method */
 package main
 
 import (
-	gc "github.com/rthornton128/goncurses"
 	"log"
+
+	gc "github.com/rthornton128/goncurses"
 )
 
 func main() {

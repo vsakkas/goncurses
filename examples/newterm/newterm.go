@@ -1,20 +1,16 @@
-// goncurses - ncurses library for Go.
-// Copyright 2011 Rob Thornton. All rights reserved.
-// Use of this source code is governed by a BSD-style
-// license that can be found in the LICENSE file.
-
 // This example demonstrates how one might write to multiple terminals from a
 // single program or redirect output. In order to run the program you must
 // supply a single argument with is a path to a pseudo-terminal device.
-//
-// This example should compile on Windows but running it may be problematic
+// NOTE: This example should compile on Windows but running it may be problematic.
+
 package main
 
 import (
 	"flag"
-	gc "github.com/rthornton128/goncurses"
 	"log"
 	"os"
+
+	gc "github.com/rthornton128/goncurses"
 )
 
 func main() {

@@ -1,14 +1,11 @@
-// goncurses - ncurses library for Go.
-// Copyright 2011 Rob Thornton. All rights reserved.
-// Use of this source code is governed by a BSD-style
-// license that can be found in the LICENSE file.
+// This example demonstrates the use of the menu library.
 
-/* This example demonstrates the use of the menu library */
 package main
 
 import (
-	"github.com/rthornton128/goncurses"
 	"log"
+
+	"github.com/rthornton128/goncurses"
 )
 
 const (

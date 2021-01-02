@@ -1,16 +1,13 @@
-// goncurses - ncurses library for Go.
-// Copyright 2011 Rob Thornton. All rights reserved.
-// Use of this source code is governed by a BSD-style
-// license that can be found in the LICENSE file.
-
 // This example demonstrates using goncurses with Go's built-in concurrency
 // primitives. It is key to ensure no reads or writes occur concurrently to
 // a window or screen. Another method would be to use a global mutex.
+
 package main
 
 import (
-	gc "github.com/rthornton128/goncurses"
 	"log"
+
+	gc "github.com/rthornton128/goncurses"
 )
 
 func main() {

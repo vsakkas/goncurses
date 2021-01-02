@@ -1,17 +1,14 @@
-// goncurses - ncurses library for Go.
-// Copyright 2011 Rob Thornton. All rights reserved.
-// Use of this source code is governed by a BSD-style
-// license that can be found in the LICENSE file.
-
 // A basic example of how to create and display a pad. Unlike a window, a
 // pad can exceed the size of the physical screen. In order to display a
 // pad you must select the portion you wish to view and where it should be
 // located on the screen.
+
 package main
 
 import (
-	gc "github.com/rthornton128/goncurses"
 	"log"
+
+	gc "github.com/rthornton128/goncurses"
 )
 
 func main() {
