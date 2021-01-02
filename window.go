@@ -170,6 +170,26 @@ func (w *Window) Copy(src *Window, sy, sx, dtr, dtc, dbr, dbc int,
 	return nil
 }
 
+// InsChar inserts the given character at the current cursor position, moving all
+// characters to the right of that position one space to the right.
+func (w *Window) InsChar(ach Char) error {
+	if err := C.winsch(w.win, C.chtype(ach)); err != C.OK {
+		return errors.New("An error occurred when trying to insert " +
+			"character")
+	}
+	return nil
+}
+
+// MoveInsChar inserts the given character at the given cursor coordinates, moving all
+// characters to the right of that position one space to the right.
+func (w *Window) MoveInsChar(y, x int, ach Char) error {
+	if err := C.mvwinsch(w.win, C.int(y), C.int(x), C.chtype(ach)); err != C.OK {
+		return errors.New("An error occurred when trying to delete " +
+			"character")
+	}
+	return nil
+}
+
 // DelChar deletes the character at the current cursor position, moving all
 // characters to the right of that position one space to the left and appends
 // a blank character at the end.
@@ -269,6 +289,27 @@ func (w *Window) CursorYX() (int, int) {
 // the specified character
 func (w *Window) HLine(y, x int, ch Char, wid int) {
 	C.mvwhline(w.win, C.int(y), C.int(x), C.chtype(ch), C.int(wid))
+	return
+}
+
+// InsLine inserts a blank line above the current line. The bottom
+// line will be lost.
+func (w *Window) InsLine() {
+	C.winsertln(w.win)
+	return
+}
+
+// DelLine deletes the line under the current cursor position, moving the below
+// lines up. A blank line will be inserted at the bottom.
+func (w *Window) DelLine() {
+	C.wdeleteln(w.win)
+	return
+}
+
+// InsDelLine inserts n lines above the current line, if n positive. If
+// negative, deletes n lines at the current cursor position.
+func (w *Window) InsDelLine(n int) {
+	C.winsdelln(w.win, C.int(n))
 	return
 }
 
