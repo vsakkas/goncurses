@@ -857,6 +857,8 @@ bits), 8 bits for other attributes, and 16 bits for character data.
 #define KEY_SUP       0x223  /* Shifted up arrow */
 #define KEY_SDOWN     0x224  /* Shifted down arrow */
 
+#define ALT_KEY_BACKSPACE 0x7F /* alternative backspace */
+
 #define KEY_MIN       KEY_BREAK      /* Minimum curses key value */
 #define KEY_MAX       KEY_SDOWN      /* Maximum curses key */
 
