@@ -8,7 +8,7 @@ package main
 import (
 	"log"
 
-	gc "github.com/rthornton128/goncurses"
+	gc "github.com/vsakkas/goncurses"
 )
 
 func main() {

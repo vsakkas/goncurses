@@ -8,7 +8,7 @@ import (
 	"os"
 	"time"
 
-	gc "github.com/rthornton128/goncurses"
+	gc "github.com/vsakkas/goncurses"
 )
 
 const density = 0.05

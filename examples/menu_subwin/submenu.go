@@ -3,7 +3,7 @@
 
 package main
 
-import gc "github.com/rthornton128/goncurses"
+import gc "github.com/vsakkas/goncurses"
 
 func main() {
 	stdscr, _ := gc.Init()

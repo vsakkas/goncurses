@@ -6,7 +6,7 @@ package main
 import (
 	"log"
 
-	. "github.com/rthornton128/goncurses"
+	. "github.com/vsakkas/goncurses"
 )
 
 const (

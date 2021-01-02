@@ -3,7 +3,7 @@ package goncurses_test
 
 import (
 	"fmt"
-	"github.com/rthornton128/goncurses"
+	"github.com/vsakkas/goncurses"
 	"os"
 )
 
