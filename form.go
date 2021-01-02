@@ -70,7 +70,7 @@ func (f *Field) Info(h, w, y, x, off, nbuf *int) error {
 	return ncursesError(syscall.Errno(err))
 }
 
-// Just returns the justification type of the field
+// Justification returns the justification type of the field
 func (f *Field) Justification() int {
 	return int(C.field_just((*C.FIELD)(f)))
 }
@@ -117,7 +117,7 @@ func (f *Field) SetMax(max int) error {
 	return ncursesError(syscall.Errno(err))
 }
 
-// OptionsOff turns feature(s) off
+// SetOptionsOff turns feature(s) off
 func (f *Field) SetOptionsOff(opts Char) error {
 	err := int(C.field_opts_off((*C.FIELD)(f), C.Field_Options(opts)))
 	if err != C.E_OK {
@@ -126,7 +126,7 @@ func (f *Field) SetOptionsOff(opts Char) error {
 	return nil
 }
 
-// OptionsOn turns feature(s) on
+// SetOptionsOn turns feature(s) on
 func (f *Field) SetOptionsOn(opts Char) error {
 	err := int(C.field_opts_on((*C.FIELD)(f), C.Field_Options(opts)))
 	if err != C.E_OK {
@@ -201,6 +201,24 @@ func (f *Form) SetFields(fields []*Field) error {
 	//}
 	//cfields[len(fields)] = nil
 	err := C.set_form_fields(f.form, (**C.FIELD)(unsafe.Pointer(&fields[0])))
+	return ncursesError(syscall.Errno(err))
+}
+
+// CurrentField returns the current field of the form
+func (f *Form) CurrentField() *Field {
+	return (*Field)(C.current_field(f.form))
+}
+
+// SetCurrentField sets the current field of the form
+func (f *Form) SetCurrentField(field *Field) error {
+	err := int(C.set_current_field(f.form, (*C.FIELD)(field)))
+	return ncursesError(syscall.Errno(err))
+}
+
+// UnfocusCurrentField removes the focus from the current field of the form.
+// Is such state, inquiries via CurrentField shall return a nil pointer.
+func (f *Form) UnfocusCurrentField() error {
+	err := int(C.unfocus_current_field(f.form))
 	return ncursesError(syscall.Errno(err))
 }
 
