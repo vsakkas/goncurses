@@ -1,15 +1,12 @@
-// goncurses - ncurses library for Go.
-// Copyright 2011 Rob Thornton. All rights reserved.
-// Use of this source code is governed by a BSD-style
-// license that can be found in the LICENSE file.
+// This example demonstrates reading a string from input, rather than a
+// single character.
 
-/* This example demonstrates reading a string from input, rather than a
- * single character */
 package main
 
 import (
-	gc "github.com/rthornton128/goncurses"
 	"log"
+
+	gc "github.com/vsakkas/goncurses"
 )
 
 func main() {

@@ -1,9 +1,6 @@
-// Copyright 2011 Rob Thornton. All rights reserved.
-// Use of this source code is governed by a BSD-style
-// license that can be found in the LICENSE file.
 package main
 
-import gc "github.com/rthornton128/goncurses"
+import gc "github.com/vsakkas/goncurses"
 
 func main() {
 	stdscr, err := gc.Init()

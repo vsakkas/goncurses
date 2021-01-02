@@ -1,12 +1,8 @@
-// goncurses - ncurses library for Go.
-// Copyright 2011 Rob Thornton. All rights reserved.
-// Use of this source code is governed by a BSD-style
-// license that can be found in the LICENSE file.
+// This simple example demonstrates how to implement a form.
 
-/* This simple example demonstrates how to implement a form */
 package main
 
-import gc "github.com/rthornton128/goncurses"
+import gc "github.com/vsakkas/goncurses"
 
 func main() {
 	stdscr, _ := gc.Init()

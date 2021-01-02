@@ -1,17 +1,12 @@
-// goncurses - ncurses library for Go.
-// Copyright 2011 Rob Thornton. All rights reserved.
-// Use of this source code is governed by a BSD-style
-// license that can be found in the LICENSE file.
+// Expanding on the basic menu example, the example demonstrates how you
+// could possibly utilize the mouse to navigate a menu and select options.
 
-/* Expanding on the basic menu example, the example demonstrates how you
- * could possibly utilize the mouse to navigate a menu and select options
- */
 package main
 
 import (
 	"log"
 
-	gc "github.com/rthornton128/goncurses"
+	gc "github.com/vsakkas/goncurses"
 )
 
 const (

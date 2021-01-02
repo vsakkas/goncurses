@@ -1,12 +1,14 @@
 // Starfield is a simple Goncurses game demo.
+
 package main
 
 import (
-	gc "github.com/rthornton128/goncurses"
 	"log"
 	"math/rand"
 	"os"
 	"time"
+
+	gc "github.com/vsakkas/goncurses"
 )
 
 const density = 0.05
