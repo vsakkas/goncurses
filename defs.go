@@ -261,6 +261,11 @@ const (
 	M_B4_CLICKED                 = C.BUTTON4_CLICKED
 	M_B4_DBL_CLICKED             = C.BUTTON4_DOUBLE_CLICKED
 	M_B4_TPL_CLICKED             = C.BUTTON4_TRIPLE_CLICKED
+	M_B5_PRESSED                 = C.BUTTON5_PRESSED // button 5
+	M_B5_RELEASED                = C.BUTTON5_RELEASED
+	M_B5_CLICKED                 = C.BUTTON5_CLICKED
+	M_B5_DBL_CLICKED             = C.BUTTON5_DOUBLE_CLICKED
+	M_B5_TPL_CLICKED             = C.BUTTON5_TRIPLE_CLICKED
 	M_CTRL                       = C.BUTTON_CTRL           // ctrl-click
 	M_SHIFT                      = C.BUTTON_SHIFT          // shift-click
 	M_POSITION                   = C.REPORT_MOUSE_POSITION // mouse moved
