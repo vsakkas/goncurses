@@ -263,12 +263,16 @@ const (
 	M_B4_CLICKED                 = C.BUTTON4_CLICKED
 	M_B4_DBL_CLICKED             = C.BUTTON4_DOUBLE_CLICKED
 	M_B4_TPL_CLICKED             = C.BUTTON4_TRIPLE_CLICKED
-	M_B5_PRESSED                 = C.BUTTON5_PRESSED // button 5
-	M_B5_RELEASED                = C.BUTTON5_RELEASED
-	M_B5_CLICKED                 = C.BUTTON5_CLICKED
-	M_B5_DBL_CLICKED             = C.BUTTON5_DOUBLE_CLICKED
-	M_B5_TPL_CLICKED             = C.BUTTON5_TRIPLE_CLICKED
-	M_CTRL                       = C.BUTTON_CTRL           // ctrl-click
-	M_SHIFT                      = C.BUTTON_SHIFT          // shift-click
-	M_POSITION                   = C.REPORT_MOUSE_POSITION // mouse moved
+	// NOTE: Using C.BUTTON5_PRESSED does not build on certain environments
+	// as it is dependent on the ncurses version. Use hardcoded code number
+	// instead. If ncurses supports button5, we should still be able to catch
+	// the event and use it.
+	M_B5_PRESSED     = 2097152 // button 5
+	M_B5_RELEASED    = 1048576
+	M_B5_CLICKED     = 4194304
+	M_B5_DBL_CLICKED = 8388608
+	M_B5_TPL_CLICKED = 16777216
+	M_CTRL           = C.BUTTON_CTRL           // ctrl-click
+	M_SHIFT          = C.BUTTON_SHIFT          // shift-click
+	M_POSITION       = C.REPORT_MOUSE_POSITION // mouse moved
 )
