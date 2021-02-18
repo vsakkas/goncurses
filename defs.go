@@ -205,6 +205,13 @@ const (
 	KEY_MOUSE             = C.KEY_MOUSE     // any mouse event
 	KEY_RESIZE            = C.KEY_RESIZE    // Terminal resize event
 	//KEY_EVENT         = C.KEY_EVENT     // We were interrupted by an event
+	KEY_CHOME   = 536 // control home key
+	KEY_CINSERT = 531 // control insert key
+	KEY_CDOWN   = 526 // control down key
+	KEY_CUP     = 567 // control up key
+	KEY_CLEFT   = 546 // control left key
+	KEY_CRIGHT  = 561 // control right key
+
 	KEY_MAX = C.KEY_MAX // Maximum key value is KEY_EVENT (0633)
 )
 
